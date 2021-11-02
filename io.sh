@@ -1,0 +1,12 @@
+#!bin/bash
+
+io_write () {
+	screen -S mbi_console -X stuff "$1"
+}
+
+io_read () {
+	msg=$(tail -1 $dir/console.log)
+	msg=${msg#*>}
+	echo $msg
+}
+
