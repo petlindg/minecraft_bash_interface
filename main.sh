@@ -24,6 +24,8 @@ maybeCmd () {
 	if [ "$cmd" = '!whitelist' ]
 	then
 		io_write "whitelist add $usr"
+		sleep 0.2s
+		io_write "say $(io_read)"
 	# checks to backup
 	elif [ "$cmd" = '!backup' ]
 	then
